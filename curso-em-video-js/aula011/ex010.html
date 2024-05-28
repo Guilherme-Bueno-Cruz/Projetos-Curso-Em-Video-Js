@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    Velocidade do carro:<input type="number" name="txtvel" id="txtvel">
+    <input type="button" value ="verificar" onclick = "enviar()">
+    <div id ="txt"> </div>
+    <script>
+        
+        function enviar(){
+            let txtv = document.getElementById('txtvel')
+            let res = document.getElementById('txt')
+            let vel = Number(txtv.value)
+           
+            if (vel > 80){
+                res.innerHTML ='Você foi multado'
+            } else{
+                res.innerHTML = 'Você não foi multado'
+            }
+        }
+    </script>
+</body>
+</html>
